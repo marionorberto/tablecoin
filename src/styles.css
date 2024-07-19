@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Monserat';
+  src: url('./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Monserat Italic';
+  src: url('./assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf');
+}
+
+:root{
+  --primary-color: #000;
+  --bg-primary-color: #000;
+  --bg-secondary-color: #000;
+  --text-primary-color: #000;
+  --text-secondary-color: #000;
+  --btn-primary-color: #000;
+  --btn-secondary-color: #000;
+  --btn-hover-color: #000;
+  --link-primary-color: #000;
+  --link-secondary-color: #000;
+  --link-hover-color: #000;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Monserat';
+}
+
+a {
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}

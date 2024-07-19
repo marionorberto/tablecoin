@@ -1,0 +1,11 @@
+#top-right-side{
+  height: 8vh;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  color: black;
+  padding: 18px;
+}
