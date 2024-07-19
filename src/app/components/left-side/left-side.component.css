@@ -8,6 +8,7 @@
   border-top: none;
   border-bottom: none;
   font-weight: 100;
+  overflow-y: auto;
 }
 
 .container-profile-image{
@@ -16,4 +17,10 @@
   align-items: start;
   padding: 18px;
   gap: 7px;
+}
+
+.online-text{
+  font-size: 14px;
+  font-weight: lighter;
+  color: rgb(90, 181, 90);
 }
