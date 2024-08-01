@@ -1,3 +1,10 @@
+@import url('../node_modules/bootstrap-icons/font/bootstrap-icons.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 @font-face {
   font-family: 'Monserat';
   src: url('./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');

@@ -8,4 +8,8 @@
   border-left: none;
   color: black;
   padding: 18px;
+  display: flex;
+  gap: 7px;
+  justify-content: end;
+  align-items: center;
 }

@@ -24,3 +24,23 @@
   font-weight: lighter;
   color: rgb(90, 181, 90);
 }
+
+
+.left-side-option{
+  display: flex;
+  gap: 7px;
+  justify-content: start;
+  align-items: center;
+  border: 1px solid #dbd6d6;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 100%;
+  padding: 10px 8px 10px 18px;
+}
+
+
+
+.icon-place-right{
+  margin-left: 90px;
+}
