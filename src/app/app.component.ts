@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { LeftSideComponent } from './components/left-side/left-side.component';
 import { RigthSideComponent } from './components/rigth-side/rigth-side.component';
 
@@ -9,7 +9,8 @@ import { RigthSideComponent } from './components/rigth-side/rigth-side.component
   imports: [
     RouterOutlet,
     LeftSideComponent,
-    RigthSideComponent
+    RigthSideComponent,
+    RouterLink
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

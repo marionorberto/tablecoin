@@ -2,5 +2,8 @@ main{
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: aqua;
+}
+
+.nav-top{
+  width: 100%;
 }

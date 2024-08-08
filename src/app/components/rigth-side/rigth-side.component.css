@@ -1,6 +1,7 @@
-#right-side{
-  height: 100vh;
+.right-side{
+  height: 100%;
   width: 84vw;
   background-color: white;
   color: black;
+  transition: width 0.3s;
 }

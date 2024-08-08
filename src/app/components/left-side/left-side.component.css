@@ -1,5 +1,5 @@
-#left-side{
-  height: 100vh;
+.left-side{
+  height: 100%;
   width: 16vw;
   background-color: white;
   color: black;
@@ -7,8 +7,9 @@
   border-left: none;
   border-top: none;
   border-bottom: none;
-  font-weight: 100;
+  /* font-weight: 100; */
   overflow-y: auto;
+  transition: width 0.3s
 }
 
 .container-profile-image{
@@ -18,13 +19,6 @@
   padding: 18px;
   gap: 7px;
 }
-
-.online-text{
-  font-size: 14px;
-  font-weight: lighter;
-  color: rgb(90, 181, 90);
-}
-
 
 .left-side-option{
   display: flex;
@@ -43,4 +37,17 @@
 
 .icon-place-right{
   margin-left: 90px;
+}
+
+.nav-active{
+  /* background: #eab308; */
+  background-color: #e4e4e7;
+}
+
+.hidden-nav-item-reports{
+  display: none;
+}
+
+.show-nav-item-reports{
+  display: flex;
 }

@@ -10,46 +10,77 @@
 </head>
 
 <body>
+
   <app-root></app-root>
 
   <script>
-    // const leftSide = document.querySelector('#left-side');
-    // const biList = document.querySelector('.bi-list');
-    // const biExpand = document.querySelector('.bi-arrows-angle-expand');
-    // const leftTextUser = document.querySelector('.left-text-user');
-    // const leftContainerImg = document.querySelector('.left-container-img');
-    // const biChevronHandle = document.querySelectorAll('.bi-chevron-handle');
-    // const iconLeft = document.querySelectorAll('.icon-left');
+    const leftSide = document.querySelector('#left-side-container');
+    const rightSide = document.querySelector('#right-side-container');
+    const reportNavFather = document.querySelector('.report');
+    const reportNavItems = document.querySelectorAll('.hidden-nav-item-reports');
+    const leftTextUser = document.querySelector('.left-text-user');
+    const iconLeftSide = document.querySelectorAll('.icon');
+    const biChevronDown = document.querySelector('.bi-chevron-down');
+    const menuToggle = document.querySelector('.bi-list');
+    const labelMonth = document.querySelector('#label-month');
+    const monthPicker = document.querySelector('#month');
 
-    // biList.addEventListener('click', (event) => {
-    //   leftSide.style.width = '49px';
-    //   event.target.style.display = 'none';
-    //   biExpand.style.display = 'flex';
+    labelMonth.addEventListener('click', function () {
+      monthPicker.showPicker();
+    });
 
-    //   leftTextUser.style.hidden = 'true';
-    //   leftContainerImg.style.margin = '15px 0 0 -5px';
+    menuToggle.addEventListener('click', (e) => {
+      if (leftSide.style.width === '16vw') {
+        leftSide.style.width = '4vw';
+        rightSide.style.width = '96vw';
 
-    //   iconLeft.forEach(el => el.style.margin = '0 10px 0 0');
+        e.target.classList.toggle('bi-list', 'bi-arrows-angle-expand');
+        e.target.style = `
+        margin-rigth: 5px;
+        `;
 
+        iconLeftSide.forEach((el) => {
+          el.style = `
+              margin-right: 12px;
+            `;
+        });
 
-    //   biChevronHandle.forEach((el) => {
-    //     el.style.display = 'none';
-    //     // biList.target.style.display = 'flex';
+        leftTextUser.style = `
+          display: none;
+        `;
+      } else {
+        leftSide.style.width = '16vw';
+        rightSide.style.width = '84vw';
 
+        iconLeftSide.forEach((el) => {
+          el.style = `
+              margin-right: 0;
+            `;
+        });
 
-    //   });
-    // });
+        menuToggle.style = `
+        margin-right: 0;
+        `;
 
-    // biExpand.addEventListener('click', () => {
-    //   event.target.style.display = 'none';
+        leftTextUser.style = `
+          display: block;
+        `;
+      }
+    });
 
-    //   biList.style.display = 'flex';
-    //   leftTextUser.style.hidden = 'false';
+    reportNavFather.addEventListener('click', (event) => {
+      biChevronDown.classList.toggle('bi-chevron-up');
+      // menuToggle.classList.remove('bi-arrows-angle-expand', 'bi-list');
 
-    //   leftSide.style.width = '16vw'
-    // });
+      reportNavItems.forEach((ele) => {
+        ele.classList.toggle('show-nav-item-reports');
+      })
+
+    });
+
 
   </script>
+
 </body>
 
 </html>

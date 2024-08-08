@@ -37,6 +37,9 @@
 
 body{
   font-family: 'Monserat';
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 a {
@@ -45,4 +48,12 @@ a {
 
 li{
   list-style: none;
+}
+
+.report-nav-item {
+  transition: width 0.3s;
+}
+
+#month{
+
 }
