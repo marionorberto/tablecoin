@@ -1,4 +1,145 @@
-<p>incomes works!</p>
+<section class="w-full bg-white p-4">
+  <div class="mb-4 flex justify-between items-center">
+    <h1 class="text-start text-neutral-400 text-3xl">Income Overview</h1>
+    <div class="mt-4 mb-8 flex justify-center items-center">
+      <input type="date" name="tt" id="tt" />
+      <label for="tt">dd</label>
+      <select name="" id=""></select>
+    </div>
+  </div>
+  <section class="flex justify-center items-center gap-3 my-8">
+    <div class="w-72 h-52 p-4 rounded-md bg-zinc-100 relative border-[1px] border-neutral-300 shadow-md">
+      <h3 class="text-zinc-400">Total Income</h3>
+      <h5 class="text-zinc-300 text-[14px] mt-2">Balance</h5>
+      <h3><span class="font-bold text-xl">2,500</span> USD</h3>
+      <div class="my-2">
+        <span class="text-zinc-300 text-[14px] mt-2">Increase</span>
+        <div class="flex-col  items-start justify-center gap-3">
+          <h3 class=" text-[16px] font-bold mb-2">+3500</h3>
+          <div class=" bg-green-500 h-2 rounded-lg w-[50%] border-2"></div>
+        </div>
+      </div>
+      <i class="bi bi-border-width absolute  p-2 bg-slate-700 text-white rounded-full h-11 w-11 bottom-[-20px] text-ls flex justify-center items-center right-[40%]"></i>
+    </div>
+    <div class="w-72 h-52 p-4 pb-5 rounded-md bg-zinc-100 relative border-[1px] border-neutral-300 shadow-md">
+      <h3 class="text-zinc-400">Average Income</h3>
+      <h5 class="text-zinc-300 text-[14px] mt-2">Balance</h5>
+      <h3><span class="font-bold text-xl">2,500</span> USD</h3>
+      <div class="my-2">
+        <span class="text-zinc-300 text-[14px] mt-2">Increase</span>
+        <div class="flex-col  items-start justify-center gap-3">
+          <h3 class=" text-[16px] font-bold mb-2">+3500</h3>
+          <div class=" bg-green-500 h-2 rounded-lg w-[50%] border-2"></div>
+        </div>
+      </div>
+      <i class="bi bi-border-width absolute  p-2 bg-slate-700 text-white rounded-full h-11 w-11 bottom-[-20px] text-ls flex justify-center items-center right-[40%]"></i>
+    </div>
+    <div class="w-72 h-52 p-3 rounded-md bg-zinc-100 relative border-[1px] border-neutral-300 shadow-md">
+      <h3 class="text-zinc-400">Highest Source</h3>
+      <h5 class="text-zinc-300 text-[14px] mt-2">Balance</h5>
+      <h3><span class="font-bold text-xl">2,500</span> USD</h3>
+      <div class="my-2">
+        <span class="text-zinc-300 text-[14px] mt-2">Increase</span>
+        <div class="flex-col  items-start justify-center gap-3">
+          <h3 class=" text-[16px] font-bold mb-2">-3500</h3>
+          <div class=" bg-red-500 h-2 rounded-lg w-[50%] border-2"></div>
+        </div>
+      </div>
+      <i class="bi bi-border-width absolute  p-2 bg-slate-700 text-white rounded-full h-11 w-11 bottom-[-20px] text-ls flex justify-center items-center right-[40%]"></i>      
+    </div>
+    <div class="w-72 h-52 p-3 rounded-md bg-zinc-100 relative border-[1px] border-neutral-300 shadow-md">
+      <h3 class="text-zinc-400">Growth Rate</h3>
+      <h5 class="text-zinc-300 text-[14px] mt-2">Balance</h5>
+      <h3><span class="font-bold text-xl">2,500</span> USD</h3>
+      <div class="my-2">
+        <span class="text-zinc-300 text-[14px] mt-2">Increase</span>
+        <div class="flex-col  items-start justify-center gap-3">
+          <h3 class=" text-[16px] font-bold mb-2">-3500</h3>
+          <div class=" bg-red-500 h-2 rounded-lg w-[50%] border-2"></div>
+        </div>
+      </div>
+      <i class="bi bi-border-width absolute  p-2 bg-slate-700 text-white rounded-full h-11 w-11 bottom-[-20px] text-ls flex justify-center items-center right-[40%]"></i>
+    </div>
+  </section>
+  <section class="flex justify-between items-center mb-8 mt-8">
+    <section>
+      <h3 class="text-neutral-300">Income by source</h3>
+      <div class="mt-8">
+        <canvas id="chart-income-by-source">{{ chartIncomeBySource }}</canvas>
+      </div>
+    </section>
+    <section>
+      <h3 class="text-neutral-300">Income by category</h3>
+      <div class="mt-8">
+        <canvas id="chart-income-by-category">{{
+          chartIncomeByCategory
+        }}</canvas>
+      </div>
+    </section>
+  </section>
+
+  <section class="my-8 flex-col justify-center items-center">
+    <h1 class="text-neutral-400">Income Trends</h1>
+    <div class="mt-8">
+      <canvas id="chart-income-trends">{{ chartIncomeTrends }}</canvas>
+    </div>
+  </section>
+
+  <section class="flex justify-between items-center gap-4 my-8">
+    <section>
+      <h2 class="text-neutral-300">Income Table</h2>
+      <table>
+        <thead>
+          <th>
+            <tr>
+              <td>Data</td>
+              <td>Source</td>
+              <td>Amount</td>
+            </tr>
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>20/05/2024</td>
+            <td>Salary</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>20/05/2024</td>
+            <td>Salary</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>20/05/2024</td>
+            <td>Salary</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>20/05/2024</td>
+            <td>Salary</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>20/05/2024</td>
+            <td>Salary</td>
+            <td>5000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      forecasting panel projections
+    <span>Shows future income projections with a small graph or key figures.</span>
+    </section>
+  </section>
+
+  <div class="flex justify-center items-center gap-2 mt-8">
+    <span class="bg-zinc-200 text-[12px] rounded-lg  p-1 text-zinc-600 border-[1px] border-zinc-600">Export as <i class="bi bi-filetype-csv font-bold"></i> </span>
+    <span class="bg-zinc-200 text-[12px] rounded-lg p-1 text-zinc-600 border-[1px] border-zinc-600">Download report <i class="bi bi-filetype-pdf font-bold"></i></span>
+  </div>
+</section>
+
+<!-- <p>incomes works!</p>
 <div>
   Receitas Totais: Resumo das receitas totais, detalhadas por mês ou trimestre.
   Receitas por Categoria: Análise das receitas de diferentes fontes (vendas, serviços, investimentos, etc.).
@@ -13,4 +154,96 @@
 
   Definição de Metas: Configuração de metas financeiras.
   Acompanhamento de Metas: Monitoramento do progresso em relação às metas definidas.
-</div>
+</div> -->
+
+<!-- Here's a simple wireframe idea for your income page. You can use this as a guide to structure your layout and ensure that it’s visually appealing and user-friendly.
+
+### 1. **Header Section**
+- **Title:** "Income Overview"
+  - Positioned at the top left.
+  - Font size: large, bold.
+- **Date Range Picker:** 
+  - Top right corner.
+  - Include options like "This Month," "Last Month," "Custom Range."
+
+---
+
+### 2. **Summary Cards**
+- **Layout:** A row of cards (typically 4) right below the header.
+  - **Card 1:** "Total Income"
+  - **Card 2:** "Average Income"
+  - **Card 3:** "Highest Income Source"
+  - **Card 4:** "Growth Rate"
+  - Each card should be rectangular with rounded corners, a small icon on the top left, the main figure prominently displayed, and a small label below it.
+
+---
+
+### 3. **Income Breakdown**
+- **Pie Chart or Bar Graph** (Left side):
+  - Displays income by source.
+  - Positioned below the summary cards, taking up about half the width of the page.
+- **Income by Category** (Right side):
+  - A bar chart or a second pie chart.
+  - Positioned to the right of the first chart, filling the remaining width.
+
+---
+
+### 4. **Income Trends**
+- **Line Graph:**
+  - Positioned directly below the income breakdown charts.
+  - Spans the full width of the page.
+  - Shows income trends over time with clear axis labels and legends.
+
+---
+
+### 5. **Income Table**
+- **Detailed Table:**
+  - Positioned below the line graph, taking up the full width.
+  - Columns: Date, Source, Amount, Category, Notes.
+  - Include sorting options by clicking on column headers.
+  - Add a search bar above the table for easy filtering.
+
+---
+
+### 6. **Forecasting Section**
+- **Projections Panel:**
+  - Positioned below the income table or beside it if there’s space.
+  - Shows future income projections with a small graph or key figures.
+
+---
+
+### 7. **Footer Section**
+- **Export & Reports:**
+  - Positioned at the bottom of the page.
+  - Include buttons for "Export as CSV," "Download PDF Report," etc.
+
+---
+
+### Visual Representation:
+
+```
++-------------------------------------------------------------+
+|                      Income Overview                        |
+|             [Date Range Picker: Last 30 Days ▼]             |
++-------------------------------------------------------------+
+|  +------------+  +------------+  +------------+  +---------+|
+|  | Total      |  | Average    |  | Highest    |  | Growth   |
+|  | Income     |  | Income     |  | Source     |  | Rate     |
+|  +------------+  +------------+  +------------+  +---------+|
++-------------------------------------------------------------+
+|   Pie Chart: Income by Source   |   Bar Chart: Income by    |
+|                                 |   Category                |
+|              [Chart]            |           [Chart]         |
++-------------------------------------------------------------+
+|                     Income Trends (Line Graph)              |
+|                            [Graph]                          |
++-------------------------------------------------------------+
+|          Income Table          |      Forecasting Panel     |
+|   [Date]  [Source]  [Amount]   |      [Projections]         |
+|   [Table]                      |                            |
++-------------------------------------------------------------+
+|                    [Export as CSV] [Download Report]        |
++-------------------------------------------------------------+
+```
+
+This wireframe should give you a clear structure to start designing your income page. It balances visuals with functionality, ensuring that your financial data is both informative and engaging. -->
