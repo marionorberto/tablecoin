@@ -94,6 +94,14 @@
     class="border-[1px] border-zinc-100 mt-4 rounded-md p-4"
   >
     <span class="font-bold my-1">Notifications History</span>
+    <span class="font-light text-[12px] text-zinc-400 block mb-1"
+      >see all on
+      <a
+        routerLink="/dashboard/notifications"
+        class="underline font-semibold cursor-pointer"
+        >notifications page</a
+      ></span
+    >
 
     <div class="grid grid-cols-1 grid-rows-1 w-full">
       <div
@@ -109,13 +117,13 @@
           <p class="text-sm py-3">For better security you need to...</p>
         </div>
         <div class="flex justify-start items-center gap-2 text-sm">
-          <span class="text-zinc-400">see</span>
-          <span class="text-zinc-200">|</span>
-          <span class="text-zinc-400">read</span>
-          <span class="text-zinc-200">|</span>
-          <span class="text-zinc-400">unread</span>
-          <span class="text-zinc-200">|</span>
-          <span class="text-zinc-400">delete</span>
+          <span class="text-zinc-400 font-bold me-2">unread</span>
+
+          <a routerLink="" class="text-zinc-600 underline">see</a>
+          <a routerLink="" class="text-zinc-200">|</a>
+          <a routerLink="" class="text-blue-400 underline">as read</a>
+          <a routerLink="" class="text-zinc-200">|</a>
+          <a routerLink="" class="text-red-400 underline">delete</a>
         </div>
       </div>
       <div
@@ -131,13 +139,13 @@
           <p class="text-sm py-3">For better security you need to...</p>
         </div>
         <div class="flex justify-start items-center gap-2 text-sm">
-          <span class="text-zinc-400">see</span>
-          <span class="text-zinc-200">|</span>
-          <span class="text-zinc-400">read</span>
-          <span class="text-zinc-200">|</span>
-          <span class="text-zinc-400">unread</span>
-          <span class="text-zinc-200">|</span>
-          <span class="text-zinc-400">delete</span>
+          <span class="text-zinc-400 font-bold me-2">unread</span>
+
+          <a routerLink="" class="text-zinc-600 underline">see</a>
+          <a routerLink="" class="text-zinc-200">|</a>
+          <a routerLink="" class="text-blue-400 underline">as read</a>
+          <a routerLink="" class="text-zinc-200">|</a>
+          <a routerLink="" class="text-red-400 underline">delete</a>
         </div>
       </div>
 
@@ -151,19 +159,6 @@
           >Mark all as read</a
         >
       </div>
-    </div>
-
-    <div class="flex gap-2 mt-3">
-      <button
-        class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-white bg-black hover:shadow-md px-6 py-2 rounded-md shadow-sm"
-      >
-        Save
-      </button>
-      <button
-        class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-black bg-white px-6 py-2 rounded-md hover:shadow-md"
-      >
-        Cancel
-      </button>
     </div>
   </form>
 </section>

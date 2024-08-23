@@ -8,45 +8,54 @@ import { FinancialIndicatorsComponent } from './components/financial-indicators/
 import { ReportsComponent } from './components/reports/reports.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
-import { MessageComponent } from './components/settings/message/message.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MessagesComponent } from './components/messages/messages.component';
 import { AccountComponent } from './components/settings/account/account.component';
 import { ProfileComponent } from './components/settings/profile/profile.component';
 import { PreferenceComponent } from './components/settings/preference/preference.component';
+import { MessageComponent as settingsMessagesComponent } from './components/settings/message/message.component';
 import { NotificationComponent as SettingsNotificationsComponent } from './components/settings/notification/notification.component'
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'dashboard',
      component: DashboardComponent
   },
    {
-    path: 'expense',
+    path: 'dashboard/expense',
     component: ExpensesComponent
   },
   {
-    path: 'incomes',
+    path: 'dashboard/incomes',
      component: IncomesComponent
   },
 
   {
-    path: 'financial-indicators',
+    path: 'dashboard/financial-indicators',
     component: FinancialIndicatorsComponent
   },
   {
-    path: 'reports',
+    path: 'dashboard/reports',
     component: ReportsComponent
   },
   {
-    path: 'cash-flow',
+    path: 'dashboard/cash-flow',
     component: CashFlowComponent
   },
   {
-    path: 'budget-performace',
+    path: 'dashboard/budget-performace',
     component: BudgetPerformanceComponent
   },
   {
-    path: 'settings', 
+    path: 'dashboard/messages',
+    component: MessagesComponent
+  },
+  {
+    path: 'dashboard/notifications',
+    component: NotificationsComponent
+  },
+  {
+    path: 'dashboard/settings', 
     component: SettingsComponent,  
     children:
     [
@@ -56,7 +65,7 @@ export const routes: Routes = [
       },
       {
         path: 'messages',
-        component: MessageComponent
+        component: settingsMessagesComponent
       }
       ,
       {

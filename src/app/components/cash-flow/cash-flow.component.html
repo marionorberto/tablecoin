@@ -21,13 +21,13 @@
     </div>
   </div>
   <section
-    class="p-6 pb-14 flex justify-between items-center gap-3 mb-14 rounded-lg bg-white shadow-lg"
+    class="p-6 pb-14 flex justify-between items-center gap-4 mb-14 rounded-lg bg-white shadow-lg"
   >
     <section class="flex flex-col gap-1 justify-center items-center">
       <div class="flex gap-2 flex-col justify-start items-center w-[24rem]">
         <div class="rounded-xl bg-zinc-50 w-full h-[13rem] p-3 shadow-md">
           <div class="flex justify-between items-center mt-[-6px]">
-            <h4 class="text-black font-bold">Net cash</h4>
+            <h4 class="text-black font-bold text-xl">Net cash</h4>
             <i class="bi bi-three-dots font-light text-xl"></i>
           </div>
           <div class="flex justify-between items-center">
@@ -40,7 +40,7 @@
                 </h5>
                 <span
                   class="flex justify-center items-center text-black font-semibold text-[13px]"
-                  ><i class="bi bi-arrow-up text-green-500"></i>60%</span
+                  ><i class="bi bi-arrow-up text-green-500"></i>35%</span
                 >
               </div>
               <div class="flex justify-center gap-3 items-center">
@@ -51,7 +51,7 @@
                 </h5>
                 <span
                   class="flex justify-center items-centert text-black font-semibold text-[13px]"
-                  ><i class="bi bi-arrow-down text-red-500"></i>80%</span
+                  ><i class="bi bi-arrow-down text-red-500"></i>75%</span
                 >
               </div>
             </div>
@@ -83,7 +83,7 @@
               35%
             </div>
             <img
-              class="absolute right-4 top-7 -rotate-6 w-16"
+              class="absolute right-4 top-7 rotate-12 w-16"
               src="../../../assets/images/wave-flow-2.svg"
               alt=""
             />
@@ -107,17 +107,9 @@
         </div>
       </div>
     </section>
-    <section></section>
-  </section>
-
-  <h2 class="text-neutral-600 text-2xl">Cash Flow waterfall</h2>
-
-  <section
-    class="flex justify-between items-center gap-4 my-8 w-full bg-white rounded-lg p-6"
-  >
-    <!-- <canvas class="w-[-10rem]" id="chart-expenses-comparison">{{
-        chartExpensesComparison
-      }}</canvas> -->
+    <section>
+      <canvas class="h-[100%]" id="chart-by-source" width="650"></canvas>
+    </section>
   </section>
 
   <h3 class="text-neutral-600 text-2xl">Cash-Flow Timeline</h3>
