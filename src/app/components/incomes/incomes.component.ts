@@ -21,21 +21,14 @@ export class IncomesComponent {
 
   createChart(){
     this.chartIncomeBySource = new Chart('chart-income-by-source', {
-      type: 'pie',
+      type: 'polarArea',
       data: {
-        labels: ['January','February','March', 'May', 'April', 'June'],
+        labels: ['salary','youtube','paid traffic', 'freelance'],
         datasets: [
           {
-            label: 'Incomes',
-            data: ['400', '700', '2500', '300', '3500', '1000'],
-            backgroundColor: '#fef9c3',
-            borderColor: '#DAA520',
-          },
-          {
-            label: 'Expenses',
-            data: ['500','1000','1500','3000','3000','3000' ],
-            backgroundColor: '#cbd5e1',
-            borderColor: '#475569',
+            label: 'source',
+            data: ['1400', '1800', '1500', '1300'],
+           backgroundColor: ['#3C3D37', '#697565', '#ECDFCC', '#000'],
           }
         ]
       },
@@ -47,30 +40,32 @@ export class IncomesComponent {
         }
       }
       }
-
     });
 
     this.chartIncomeByCategory = new Chart('chart-income-by-category', {
       type: 'bar',
       data: {
-        labels: ['January','February','March', 'May', 'April', 'June'],
+        labels: ['salary', 'freelance', 'bussines', 'debt'],
         datasets: [
           {
-            label: 'Incomes',
-            data: ['400', '700', '2500', '300', '3500', '1000'],
-            backgroundColor: '#fef9c3',
-            borderColor: '#DAA520',
-          },
-          {
-            label: 'Expenses',
-            data: ['500','1000','1500','3000','3000','3000' ],
-            backgroundColor: '#cbd5e1',
-            borderColor: '#475569',
+            label: 'category',
+            data: ['1500', '1750', '1000', '1300'],
+            backgroundColor: ['#525252', '#a3a3a3', '#737373', '#000'],
+            borderColor: '#fef9c3',
+            borderRadius: 5,
+            barPercentage: 0.4
+            
           }
         ]
       },
       options: {
         aspectRatio: 2.5,
+        scales: {
+       x: {
+        grid: {
+          display: false
+    }}
+     },
       plugins: {
         legend: {
           display: false
@@ -83,33 +78,31 @@ export class IncomesComponent {
     this.chartIncomeTrends = new Chart('chart-income-trends', {
       type: 'line',
       data: {
-        labels: ['January','February','March', 'May', 'April', 'June'],
+        labels: ['August', 'Setember', 'Outober', 'November', 'December'],
         datasets: [
           {
-            label: 'Incomes',
-            data: ['400', '700', '2500', '300', '3500', '1000'],
-            backgroundColor: '#fef9c3',
-            borderColor: '#DAA520',
-          },
-          {
-            label: 'Expenses',
-            data: ['500','1000','1500','3000','3000','3000' ],
-            backgroundColor: '#cbd5e1',
-            borderColor: '#475569',
+            label: 'Trends',
+            data: ['10', '17', '20', '26', '30'],
+            backgroundColor: '#fed7aa ',
+            borderColor: '#f97316',
+            fill: true
           }
         ]
       },
       options: {
         aspectRatio: 2.5,
+          scales: {
+       x: {
+        grid: {
+          display: false
+    }}
+     },
       plugins: {
         legend: {
           display: false
         }
       }
       }
-
     });
   }
-
-
 }

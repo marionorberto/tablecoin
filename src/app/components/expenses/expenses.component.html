@@ -1,5 +1,555 @@
-<p>expenses works!</p>
+<section class="w-full p-4">
+  <div class="mb-7 flex justify-between items-center">
+    <h1 class="text-start text-neutral-600 text-3xl">Expenses Overview</h1>
+    <div class="flex justify-center items-center gap-2">
+      <span class="text-zinc-300 text-sm">sorty by</span>
+      <span
+        class="relative flex justify-center items-center gap-2 rounded-lg bg-zinc-200 p-2 cursor-pointer"
+      >
+        <span class="text-neutral-800 text-sm cursor-pointer">Month</span>
+        <label for="month" id="label-month">
+          <i class="bi bi-calendar-check-fill cursor-pointer text-neutral-600">
+          </i>
+        </label>
+        <input
+          id="month"
+          class="hidden absolute top-0 right-0"
+          name="month"
+          type="date"
+        />
+      </span>
+    </div>
+  </div>
+  <section
+    class="p-6 pb-14 flex justify-between items-center gap-3 mb-14 rounded-lg bg-white shadow-lg"
+  >
+    <section>
+      <h2 class="text-neutral-600 text-3xl">
+        Total Expenses <span class="text-zinc-300 text-sm">| July</span>
+      </h2>
+      <h3 class="text-zinc-500">Current Amount Spent</h3>
+      <h1
+        class="text-neutral-800 text-8xl font-bold my-2 flex justify-start items-center gap-1"
+      >
+        5,500 <span class="text-zinc-300 text-3xl font-normal">USD</span>
+      </h1>
+      <h3 class="text-sm">
+        <span class="font-bold"> +10 % </span>
+        <span class="text-zinc-500">compared to previous month</span>
+      </h3>
+      <div class="my-5 gap-3 flex justify-start text-sm items-center">
+        <button
+          class="transition-all text-[12px] transition-[all 0.4s ease-in-out] font-medium hover:text-black hover:bg-white border-[1px] border-black text-white bg-black px-3 py-2 rounded-md shadow-sm"
+        >
+          + add Expenses
+        </button>
+        <button
+          class="transition-all text-[12px] transition-[all 0.4s ease-in-out] font-medium hover:text-black hover:bg-white border-[1px] border-black text-white bg-black px-3 py-2 rounded-md shadow-sm"
+        >
+          - remove Expenses
+        </button>
+      </div>
+    </section>
+    <section>
+      <div class="mt-8">
+        <canvas class="w-[600px]" id="chart-expenses-month">{{
+          chartExpensesMonth
+        }}</canvas>
+      </div>
+      <div class="mt-3 ms-5 flex gap-10 justify-center items-center">
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-stone-600 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">February</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-stone-600 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">March</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-stone-600 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">April</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-stone-600 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">May</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-stone-600 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">June</span>
+        </span>
+      </div>
+    </section>
+  </section>
+  <div class="flex justify-between items-center">
+    <h2 class="text-neutral-600 text-3xl">Expenses List</h2>
+
+    <div class="flex justify-center items-center gap-2">
+      <span class="text-zinc-300 text-sm">sorty by</span>
+      <span
+        class="relative flex justify-center items-center gap-2 rounded-lg bg-zinc-200 p-2 cursor-pointer"
+      >
+        <span class="text-neutral-800 text-sm cursor-pointer">Month</span>
+        <label for="month" id="label-month">
+          <i class="bi bi-calendar-check-fill cursor-pointer text-neutral-600">
+          </i>
+        </label>
+        <input
+          id="month"
+          class="hidden absolute top-0 right-0"
+          name="month"
+          type="date"
+        />
+      </span>
+    </div>
+  </div>
+  <h3 class="text-zinc-300">Top List Expenses</h3>
+  <section
+    class="flex justify-between items-center gap-4 my-8 w-full bg-white rounded-lg p-6"
+  >
+    <section class="w-full">
+      <table class="w-full font-light my-8 bg-neutral-800">
+        <thead class="text-white">
+          <tr class="">
+            <th class="">#</th>
+            <th>Data</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Payment</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white text-neutral-600 w-full p-2 text-start">
+          <tr>
+            <td>1</td>
+            <td>20-01-2024</td>
+            <td>Freelancer</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
+            <td>website building</td>
+          </tr>
+          <tr class="bg-zinc-100">
+            <td>2</td>
+            <td>10-03-2024</td>
+            <td>Job</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
+            <td>website building</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>20-05-2024</td>
+            <td>Job</td>
+            <td>100</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
+          </tr>
+          <tr class="bg-zinc-100">
+            <td>3</td>
+
+            <td>20-05-2024</td>
+            <td>Job</td>
+            <td>100</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>20-05-2024</td>
+            <td>Job</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
+            <td>website building</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+  <div class="flex justify-between items-center">
+    <h1 class="text-neutral-600 text-3xl">Category Breakdown</h1>
+
+    <div class="flex justify-center items-center gap-2">
+      <span class="text-zinc-300 text-sm">sorty by</span>
+      <span
+        class="relative flex justify-center items-center gap-2 rounded-lg bg-zinc-200 p-2 cursor-pointer"
+      >
+        <span class="text-neutral-800 text-sm cursor-pointer">Month</span>
+        <label for="month" id="label-month">
+          <i class="bi bi-calendar-check-fill cursor-pointer text-neutral-600">
+          </i>
+        </label>
+        <input
+          id="month"
+          class="hidden absolute top-0 right-0"
+          name="month"
+          type="date"
+        />
+      </span>
+    </div>
+  </div>
+  <h3 class="text-zinc-300">Top List Expenses's categories</h3>
+  <section
+    class="flex justify-between items-stretch mb-8 mt-8 w-full bg-white rounded-lg p-6"
+  >
+    <section class="relative w-full flex justify-start items-center py-14">
+      <canvas class="w-[-10rem]" id="chart-expenses-comparison">{{
+        chartExpensesComparison
+      }}</canvas>
+      <div class="absolute right-5 gap-10 grid grid-cols-2 grid-rows-2">
+        <span
+          class="flex flex-col rounded-lg bg-zinc-50 p-7 justify-center items-center gap-1"
+        >
+          <span class="text-stone-600 text-sm font-bold">March</span>
+          <span class="text-stone-600 text-sm font-light">1200$</span>
+        </span>
+        <span
+          class="flex flex-col rounded-lg justify-center bg-zinc-50 items-center gap-1 p-7"
+        >
+          <span class="text-lime-600 text-sm font-bold">April</span>
+          <span class="text-lime-600 text-sm font-light">1200$</span>
+        </span>
+        <span
+          class="flex flex-col rounded-lg justify-center bg-zinc-50 items-center gap-1 p-7"
+        >
+          <span class="text-rose-300 text-sm font-bold">May</span>
+          <span class="text-rose-300 text-sm font-light">1200$</span>
+        </span>
+        <span
+          class="flex flex-col rounded-lg justify-center bg-zinc-50 items-center gap-1 p-7"
+        >
+          <span class="text-black text-sm font-bold">June</span>
+          <span class="text-black text-sm font-light">1200$</span>
+        </span>
+      </div>
+    </section>
+  </section>
+
+  <div class="flex justify-center items-center gap-2 mt-8">
+    <span
+      class="cursor-pointer text-[14px] rounded-lg p-1 text-zinc-500 hover:text-zinc-400"
+      >Export as <i class="bi bi-filetype-csv font-bold"></i>
+    </span>
+
+    <span>/</span>
+    <span
+      class="hover:text-zinc-400 cursor-pointer text-[14px] p-1 text-zinc-500"
+      >Download report <i class="bi bi-filetype-pdf font-bold"></i
+    ></span>
+  </div>
+</section>
+
+<!-- <p>incomes works!</p>
+
+
 <div>
-  Despesas Totais: Resumo das despesas totais, detalhadas por mês ou trimestre.
-  Despesas por Categoria: Análise das despesas por diferentes categorias (salários, marketing, operações, etc.).
-</div>
+  Investimentos
+
+  Resumo de Investimentos: Desempenho geral dos investimentos.
+  Análise de Portfólio: Análise detalhada de diferentes investimentos e seu desempenho.
+  Metas Financeiras
+
+  Definição de Metas: Configuração de metas financeiras.
+  Acompanhamento de Metas: Monitoramento do progresso em relação às metas definidas.
+</div> -->
+
+<!-- Here's a simple wireframe idea for your income page. You can use this as a guide to structure your layout and ensure that it’s visually appealing and user-friendly.
+
+
+
+### 3. **Income Breakdown**
+- **Pie Chart or Bar Graph** (Left side):
+  - Displays income by source.
+  - Positioned below the summary cards, taking up about half the width of the page.
+- **Income by Category** (Right side):
+  - A bar chart or a second pie chart.
+  - Positioned to the right of the first chart, filling the remaining width.
+
+---
+
+### 4. **Income Trends**
+- **Line Graph:**
+  - Positioned directly below the income breakdown charts.
+  - Spans the full width of the page.
+  - Shows income trends over time with clear axis labels and legends.
+
+---
+
+### 5. **Income Table**
+- **Detailed Table:**
+  - Positioned below the line graph, taking up the full width.
+  - Columns: Date, Source, Amount, Category, Notes.
+  - Include sorting options by clicking on column headers.
+  - Add a search bar above the table for easy filtering.
+
+---
+
+### 6. **Forecasting Section**
+- **Projections Panel:**
+  - Positioned below the income table or beside it if there’s space.
+  - Shows future income projections with a small graph or key figures.
+
+---
+
+### 7. **Footer Section**
+- **Export & Reports:**
+  - Positioned at the bottom of the page.
+  - Include buttons for "Export as CSV," "Download PDF Report," etc.
+
+---
+
+### Visual Representation:
+
+```
++-------------------------------------------------------------+
+|                      Income Overview                        |
+|             [Date Range Picker: Last 30 Days ▼]             |
++-------------------------------------------------------------+
+|  +------------+  +------------+  +------------+  +---------+|
+|  | Total      |  | Average    |  | Highest    |  | Growth   |
+|  | Income     |  | Income     |  | Source     |  | Rate     |
+|  +------------+  +------------+  +------------+  +---------+|
++-------------------------------------------------------------+
+|   Pie Chart: Income by Source   |   Bar Chart: Income by    |
+|                                 |   Category                |
+|              [Chart]            |           [Chart]         |
++-------------------------------------------------------------+
+|                     Income Trends (Line Graph)              |
+|                            [Graph]                          |
++-------------------------------------------------------------+
+|          Income Table          |      Forecasting Panel     |
+|   [Date]  [Source]  [Amount]   |      [Projections]         |
+|   [Table]                      |                            |
++-------------------------------------------------------------+
+|                    [Export as CSV] [Download Report]        |
++-------------------------------------------------------------+
+```
+
+This wireframe should give you a clear structure to start designing your income page. It balances visuals with functionality, ensuring that your financial data is both informative and engaging. -->
+
+<!-- <section class="w-full p-4" style="color: #f2f2f2">
+  <div class="mb-2 flex justify-between items-center">
+    <h1 class="text-start text-neutral-600 text-3xl">Expenses Overview</h1>
+  </div>
+  <section class="flex justify-start items-center gap-3 mb-8">
+    <div
+      class="w-[30rem] h-80 p-3 rounded-md bg-white relative border-[1px] border-neutral-100 shadow-md"
+    >
+      <h3 class="text-neutral-700 text-xl">Total Expenses</h3>
+      <h1 class="text-neutral-600 text-6xl font-bold mt-3">
+        3500<span class="font-medium text-5xl">USB</span>
+      </h1>
+    </div>
+    <div
+      class="w-[30rem] h-80 p-3 rounded-md bg-white relative border-[1px] border-neutral-100 shadow-md"
+    >
+      <div class="flex justify-between items-center">
+        <div>
+          <h2 class="text-neutral-700 text-lg">Expenses comparison</h2>
+          <h5 class="text-neutral-500 text-sm">Spent with other months</h5>
+        </div>
+        <div
+          class="h-14 w-14 bg-neutral-200 rounded-full flex justify-center items-center"
+        >
+          <i
+            class="cursor-pointer bi bi-calendar-month text-2xl text-neutral-600"
+          ></i>
+        </div>
+      </div>
+      <div class="mt-8">
+        <canvas class="" id="chart-comparison">{{ chatComparison }}</canvas>
+      </div>
+    </div>
+  </section>
+
+  <div class="flex justify-center items-center gap-2 mt-8">
+    <span
+      class="bg-neutral-200 text-[14px] rounded-lg p-1 text-neutral-600 border-[1px] border-neutral-600"
+      >Export as <i class="bi bi-filetype-csv font-bold"></i>
+    </span>
+    <span
+      class="bg-neutral-200 text-[14px] rounded-lg p-1 text-neutral-600 border-[1px] border-neutral-600"
+      >Download report <i class="bi bi-filetype-pdf font-bold"></i
+    ></span>
+  </div>
+</section> -->
+
+<!-- 
+Certainly! Here’s a textual representation of a simple mockup for your expenses page:
+
+---
+
+### **Expenses Page Mockup**
+
+---
+
+#### **Header**
+- **Title:** `Despesas`
+- **Filters:**
+  - **Date Range Selector:** [Start Date] [End Date]
+  - **Category Filter:** [Select Category]
+  - **Search Bar:** [Search Expenses]
+
+---
+
+#### **Despesas Totais (Total Expenses)**
+- **Total Expenses:** 
+  - **Card:** `$5,000` (Total Amount Spent)
+- **Monthly/Quarterly Breakdown:**
+  - **Bar Chart:** 
+    - January: $1,000
+    - February: $1,200
+    - March: $1,500
+    - April: $1,300
+    - **Comparison:** `+10%` (Compared to Previous Period)
+
+---
+
+#### **Despesas por Categoria (Expenses by Category)**
+- **Category Breakdown:**
+  - **Pie Chart:** 
+    - Salaries: 40%
+    - Marketing: 25%
+    - Operations: 20%
+    - Miscellaneous: 15%
+  - **Top Categories:**
+    - Salaries: $2,000
+    - Marketing: $1,250
+    - Operations: $1,000
+    - Miscellaneous: $750
+  - **Drill-Down:** [View Details]
+
+---
+
+#### **Expense List**
+- **Table:**
+  - **Columns:**
+    - **Date:** `01/01/2024`
+    - **Description:** `Office Supplies`
+    - **Category:** `Operations`
+    - **Amount:** `$100`
+    - **Payment Method:** `Credit Card`
+    - **Notes:** `Purchased office supplies`
+  - **Sorting Options:** [Sort by Date] [Sort by Amount] [Sort by Category]
+  - **Search Bar:** [Search]
+
+---
+
+#### **Add Expense**
+- **Form:**
+  - **Date:** [Select Date]
+  - **Description:** [Expense Description]
+  - **Category:** [Select Category]
+  - **Amount:** [Amount]
+  - **Payment Method:** [Payment Method]
+  - **Notes:** [Optional Notes]
+  - **Button:** [Add Expense]
+
+---
+
+#### **Analysis and Reports**
+- **Expense Forecasting:**
+  - **Graph:** Projected spending for the next 3 months.
+- **Budget vs. Actual:**
+  - **Comparison Chart:** Budgeted Amount vs. Actual Expenses.
+- **Savings Opportunities:**
+  - **List:** Recommendations for reducing spending.
+
+---
+
+#### **Footer**
+- **Export Options:**
+  - **Buttons:** [Export as CSV] [Export as Excel] [Export as PDF]
+- **Sharing Options:**
+  - **Buttons:** [Share via Email] [Share on Social Media]
+
+---
+
+### **Design Elements**
+- **Color Scheme:** Neutral with accent colors for emphasis (e.g., blue for totals, green for savings).
+- **Typography:** Bold for headings, regular for data.
+- **Icons:** Simple icons for categories and actions.
+- **Whitespace:** Adequate spacing around elements for clarity.
+
+This layout organizes the content clearly, making it easy for users to navigate and interact with their expense data. -->
+
+<!-- 
+Here's a textual mockup of your expenses page layout:
+
+### **Expenses Page Layout**
+
+---
+
+#### **Header Section**
+- **Title:** "Despesas" (Expenses)
+- **Filters:**
+  - **Date Range Selector:** Dropdown or calendar input to choose the period (monthly, quarterly, yearly).
+  - **Category Filter:** Dropdown to filter expenses by category.
+  - **Search Bar:** Input field for searching specific expenses.
+
+---
+
+#### **Despesas Totais (Total Expenses)**
+- **Summary Cards:**
+  - **Total Expenses:** Large card displaying the total amount spent.
+  - **Monthly/Quarterly Breakdown:** Bar chart showing expenses for each month or quarter within the selected period.
+  - **Comparison with Previous Periods:** A small indicator showing percentage increase or decrease compared to the previous period.
+
+---
+
+#### **Despesas por Categoria (Expenses by Category)**
+- **Category Breakdown:**
+  - **Pie Chart:** Visual representation of expenses by category, showing the proportion of total spending for each.
+  - **Top Categories:** Horizontal bar chart or list of top 5 categories by expense.
+  - **Drill-Down Option:** Links or buttons to view detailed expenses within each category.
+
+---
+
+#### **Expense List**
+- **Table View:**
+  - **Columns:**
+    - **Date:** Sortable column for the date of each expense.
+    - **Description:** Brief description of the expense.
+    - **Category:** Category name (salaries, marketing, operations, etc.).
+    - **Amount:** Monetary value of the expense, with currency.
+    - **Payment Method:** Indication of how the payment was made.
+    - **Notes:** Optional notes or comments for each expense.
+  - **Sorting:** Ability to sort by date, amount, category, etc.
+  - **Search Function:** Inline search field for quick filtering.
+  - **Bulk Actions:** Checkbox for selecting multiple expenses with options to delete or edit.
+
+---
+
+#### **Add Expense**
+- **Quick Add Form:**
+  - **Fields:** Date, Description, Category, Amount, Payment Method, Notes.
+  - **Add Button:** Prominent button to add the expense to the list.
+  - **Recurring Option:** Checkbox to mark an expense as recurring.
+
+---
+
+#### **Analysis and Reports**
+- **Expense Forecasting:** Graph showing predicted future expenses based on past trends.
+- **Budget vs. Actual:** Comparison chart displaying actual expenses against the budget for each category.
+- **Savings Opportunities:** List or graphic indicating potential areas for cost-saving.
+
+---
+
+#### **Footer Section**
+- **Export Options:**
+  - **Buttons:** Export as CSV, Excel, or PDF.
+  - **Sharing:** Option to share the report via email or other platforms.
+
+---
+
+### **Design Elements**
+- **Color Scheme:** Consistent and visually appealing colors, possibly using green for positive trends and red for negative trends.
+- **Typography:** Clear, easy-to-read fonts for headings, charts, and tables.
+- **Icons and Visuals:** Use of icons for categories, and charts to enhance understanding.
+- **Whitespace:** Ample whitespace for a clean, uncluttered look.
+
+This mockup outlines a user-friendly, visually appealing, and functional expenses page, incorporating all the necessary features for a comprehensive financial dashboard. -->

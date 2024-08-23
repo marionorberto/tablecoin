@@ -1,4 +1,4 @@
-.left-side{
+.left-side {
   height: 100%;
   width: 16vw;
   background-color: white;
@@ -9,10 +9,10 @@
   border-bottom: none;
   /* font-weight: 100; */
   overflow-y: auto;
-  transition: width 0.3s
+  transition: width 0.3s;
 }
 
-.container-profile-image{
+.container-profile-image {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -20,7 +20,7 @@
   gap: 7px;
 }
 
-.left-side-option{
+.left-side-option {
   display: flex;
   gap: 7px;
   justify-content: start;
@@ -33,21 +33,19 @@
   padding: 10px 8px 10px 18px;
 }
 
-
-
-.icon-place-right{
+.icon-place-right {
   margin-left: 90px;
 }
 
-.nav-active{
+.nav-active {
   /* background: #eab308; */
-  background-color: #e4e4e7;
+  background-color: #f4f4f5;
 }
 
-.hidden-nav-item-reports{
+.hidden-nav-item-reports {
   display: none;
 }
 
-.show-nav-item-reports{
+.show-nav-item-reports {
   display: flex;
 }

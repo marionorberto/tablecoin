@@ -1,0 +1,28 @@
+table,
+thead {
+  border-radius: 7px;
+}
+
+td {
+  max-width: 60px;
+  height: 50px;
+  text-align: start;
+  padding-left: 12px;
+}
+
+th {
+  height: 50px;
+  min-width: 60px;
+  text-align: start;
+  padding-left: 12px;
+}
+
+/* .tr-head {
+  border-radius: 10px;
+} */
+
+.card-img {
+  background-image: url("../../../assets/images/blob-scene-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

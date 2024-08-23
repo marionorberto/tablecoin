@@ -11,29 +11,32 @@ import { Chart } from 'chart.js/auto';
 })
 export class CashFlowComponent {
 
- public chart: any;
+ chartCashFlow: any;
 
   createChart(){
-    this.chart = new Chart("grafico1",{
-      type: 'bar',
+    this.chartCashFlow = new Chart("chart-cash-flow",{
+      type: 'doughnut',
       data: {
-        labels: ['2010-01-23','2011-11-01','2012-05-18','2013-09-13'],
+        labels: ['inflow','outflow'],
         datasets: [
           {
-            label: "sales",
-            data: ['344', '544', '90', '88'],
-            backgroundColor: 'blue'
-          },
-          {
-            label: 'profit',
-            data: ['465','576','344','555'],
-            backgroundColor: 'limegreen'
+            label: "inflow",
+            data: ['35', '75'],
+            backgroundColor: ['#fdba74', '#f97316'],
+            borderRadius: 5,
+            circumference: 360,
+            borderWidth: 3,
           }
         ]
       },
       options: {
-        aspectRatio: 2.5
+          aspectRatio: 2.5,
+      plugins: {
+        legend: {
+          display: false
+        }
       }
+     }
     });
   }
 

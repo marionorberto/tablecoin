@@ -1,0 +1,36 @@
+.nav-li {
+  position: relative;
+}
+
+.nav-li:hover {
+  color: #f97316;
+}
+
+.nav-a::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: -1px;
+  margin-top: 8px;
+  background-color: #f97316;
+  height: 2px;
+  width: 100%;
+  scale: 0;
+  transition: all 0.4s;
+}
+
+.nav-a:hover::after {
+  color: #f97316;
+  transition: all 0.4s;
+  scale: 1;
+}
+
+.nav-active {
+  color: #f97316;
+}
+
+.nav-active::after {
+  color: #f97316;
+  transition: all 0.4s;
+  scale: 1;
+}

@@ -8,21 +8,27 @@ import { FinancialIndicatorsComponent } from './components/financial-indicators/
 import { ReportsComponent } from './components/reports/reports.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
-import { MessagesComponent } from './components/messages/messages.component';
+import { MessageComponent } from './components/settings/message/message.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AccountComponent } from './components/settings/account/account.component';
+import { ProfileComponent } from './components/settings/profile/profile.component';
+import { PreferenceComponent } from './components/settings/preference/preference.component';
+import { NotificationComponent as SettingsNotificationsComponent } from './components/settings/notification/notification.component'
 
 export const routes: Routes = [
   {
     path: '',
      component: DashboardComponent
   },
+   {
+    path: 'expense',
+    component: ExpensesComponent
+  },
   {
     path: 'incomes',
      component: IncomesComponent
   },
-  {
-    path: 'expenses',
-    component: ExpensesComponent
-  },
+
   {
     path: 'financial-indicators',
     component: FinancialIndicatorsComponent
@@ -40,14 +46,36 @@ export const routes: Routes = [
     component: BudgetPerformanceComponent
   },
   {
-    path: 'settings',
-    component: SettingsComponent
-  },{
-    path: 'messages',
-    component: MessagesComponent
+    path: 'settings', 
+    component: SettingsComponent,  
+    children:
+    [
+       {
+        path: 'profile',
+        component: ProfileComponent
+      },
+      {
+        path: 'messages',
+        component: MessageComponent
+      }
+      ,
+      {
+        path: 'notifications',
+        component: SettingsNotificationsComponent
+      },
+      {
+        path: 'preferences',
+        component: PreferenceComponent
+      },
+      {
+        path: 'account',
+        component: AccountComponent
+      }
+    ]
   },
   {
-    path: 'notifications',
-    component: NotificationsComponent
+    path: '**',
+    component: PageNotFoundComponent,
+    pathMatch: 'full'
   }
 ];

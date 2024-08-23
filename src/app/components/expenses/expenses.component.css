@@ -1,0 +1,21 @@
+table,
+thead {
+  border-radius: 7px;
+}
+
+td {
+  max-width: 60px;
+  height: 60px;
+  text-align: start;
+  padding-left: 12px;
+}
+
+th {
+  height: 60px;
+  min-width: 60px;
+  text-align: start;
+  padding-left: 12px;
+}
+
+#chart-expenses-comparison {
+}

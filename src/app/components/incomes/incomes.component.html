@@ -1,249 +1,306 @@
-<section class="w-full bg-white p-4">
-  <div class="mb-4 flex justify-between items-center">
-    <h1 class="text-start text-neutral-400 text-3xl">Income Overview</h1>
-    <div class="mt-4 mb-8 flex justify-center items-center">
-      <input type="date" name="tt" id="tt" />
-      <label for="tt">dd</label>
-      <select name="" id=""></select>
+<section class="w-full p-4">
+  <div class="mb-7 flex justify-between items-center">
+    <h1 class="text-start text-neutral-600 text-3xl">Income Overview</h1>
+    <div class="flex justify-center items-center gap-2">
+      <span class="text-zinc-300 text-sm">sorty by</span>
+      <span
+        class="relative flex justify-center items-center gap-2 rounded-lg bg-zinc-200 p-2 cursor-pointer"
+      >
+        <span class="text-neutral-800 text-sm cursor-pointer">Month</span>
+        <label for="month" id="label-month">
+          <i class="bi bi-calendar-check-fill cursor-pointer text-neutral-600">
+          </i>
+        </label>
+        <input
+          id="month"
+          class="hidden absolute top-0 right-0"
+          name="month"
+          type="date"
+        />
+      </span>
     </div>
   </div>
-  <section class="flex justify-center items-center gap-3 my-8">
-    <div class="w-72 h-52 p-4 rounded-md bg-zinc-100 relative border-[1px] border-neutral-300 shadow-md">
-      <h3 class="text-zinc-400">Total Income</h3>
-      <h5 class="text-zinc-300 text-[14px] mt-2">Balance</h5>
-      <h3><span class="font-bold text-xl">2,500</span> USD</h3>
-      <div class="my-2">
-        <span class="text-zinc-300 text-[14px] mt-2">Increase</span>
-        <div class="flex-col  items-start justify-center gap-3">
-          <h3 class=" text-[16px] font-bold mb-2">+3500</h3>
-          <div class=" bg-green-500 h-2 rounded-lg w-[50%] border-2"></div>
+  <section class="flex justify-center items-center gap-3 mb-14">
+    <div
+      class="flex flex-col justify-center items-center w-72 h-56 p-4 rounded-md bg-white border-[1px] border-neutral-100 shadow-md"
+    >
+      <i
+        class="mt-5 bi bi-currency-exchange font-medium p-4 bg-stone-200 text-stone-500 rounded-full h-10 w-10 text-xl flex justify-center items-center"
+      ></i>
+      <h3 class="text-neutral-400 mt-2 text-xl ms-1">Total Income</h3>
+      <h5 class="text-neutral-300 text-[14px] mt-2">Balance</h5>
+      <h3 class="text-neutral-400 flex justify-start items-center gap-1">
+        <span class="font-bold text-3xl text-neutral-700">3,500</span> USD
+      </h3>
+      <div class="my-1">
+        <span class="text-neutral-300 text-[14px] mt-2 ms-2">Increase</span>
+        <div class="flex-col items-start justify-center gap-3">
+          <h3 class="text-[20px] font-bold mb-2 text-neutral-700">
+            +550
+            <i
+              class="text-green-500 bi bi-arrow-up-right-circle-fill text-[14px]"
+            ></i>
+          </h3>
         </div>
       </div>
-      <i class="bi bi-border-width absolute  p-2 bg-slate-700 text-white rounded-full h-11 w-11 bottom-[-20px] text-ls flex justify-center items-center right-[40%]"></i>
     </div>
-    <div class="w-72 h-52 p-4 pb-5 rounded-md bg-zinc-100 relative border-[1px] border-neutral-300 shadow-md">
-      <h3 class="text-zinc-400">Average Income</h3>
-      <h5 class="text-zinc-300 text-[14px] mt-2">Balance</h5>
-      <h3><span class="font-bold text-xl">2,500</span> USD</h3>
-      <div class="my-2">
-        <span class="text-zinc-300 text-[14px] mt-2">Increase</span>
-        <div class="flex-col  items-start justify-center gap-3">
-          <h3 class=" text-[16px] font-bold mb-2">+3500</h3>
-          <div class=" bg-green-500 h-2 rounded-lg w-[50%] border-2"></div>
+    <div
+      class="flex flex-col justify-center items-center w-72 h-56 p-4 rounded-md bg-white relative border-[1px] border-neutral-100 shadow-md"
+    >
+      <i
+        class="mt-5 bi bi-wallet-fill font-medium p-4 bg-rose-200 text-rose-500 rounded-full h-10 w-10 text-xl flex justify-center items-center"
+      ></i>
+      <h3 class="text-neutral-400 mt-2 text-xl ms-5">Average Income</h3>
+      <h5 class="text-neutral-300 text-[14px] mt-2">Balance</h5>
+      <h3 class="text-neutral-400 flex justify-start items-center gap-1">
+        <span class="font-bold text-3xl text-neutral-700">1,750</span> USD
+      </h3>
+      <div class="my-1">
+        <span class="text-neutral-300 text-[14px] mt-2 ms-2">Increase</span>
+        <div class="flex-col items-start justify-center gap-3">
+          <h3 class="text-[20px] font-bold mb-2 text-neutral-700">
+            +1,500
+            <i
+              class="text-green-500 bi bi-arrow-up-right-circle-fill text-[14px]"
+            ></i>
+          </h3>
         </div>
       </div>
-      <i class="bi bi-border-width absolute  p-2 bg-slate-700 text-white rounded-full h-11 w-11 bottom-[-20px] text-ls flex justify-center items-center right-[40%]"></i>
     </div>
-    <div class="w-72 h-52 p-3 rounded-md bg-zinc-100 relative border-[1px] border-neutral-300 shadow-md">
-      <h3 class="text-zinc-400">Highest Source</h3>
-      <h5 class="text-zinc-300 text-[14px] mt-2">Balance</h5>
-      <h3><span class="font-bold text-xl">2,500</span> USD</h3>
-      <div class="my-2">
-        <span class="text-zinc-300 text-[14px] mt-2">Increase</span>
-        <div class="flex-col  items-start justify-center gap-3">
-          <h3 class=" text-[16px] font-bold mb-2">-3500</h3>
-          <div class=" bg-red-500 h-2 rounded-lg w-[50%] border-2"></div>
+    <div
+      class="flex flex-col justify-center items-center w-72 h-56 p-4 rounded-md bg-white relative border-[1px] border-neutral-100 shadow-md"
+    >
+      <i
+        class="mt-5 bi bi-arrow-up-circle font-medium p-4 bg-lime-200 text-lime-500 rounded-full h-10 w-10 text-2xl flex justify-center items-center"
+      ></i>
+      <h3 class="text-neutral-400 mt-2 text-[20px] ms-5">Highest Source</h3>
+      <h5 class="text-neutral-300 text-[14px] mt-2">Balance</h5>
+      <h3 class="text-neutral-400 flex justify-start items-center gap-1">
+        <span class="font-bold text-3xl text-neutral-700">2,500</span> USD
+      </h3>
+      <div class="my-1">
+        <span class="text-neutral-300 text-[14px] mt-2 ms-2">Dicrease</span>
+        <div class="flex-col items-start justify-center gap-3">
+          <h3 class="text-[20px] font-bold mb-2 text-neutral-700">
+            -3,500
+            <i
+              class="text-red-500 bi bi-arrow-down-left-circle-fill text-[14px]"
+            ></i>
+          </h3>
         </div>
       </div>
-      <i class="bi bi-border-width absolute  p-2 bg-slate-700 text-white rounded-full h-11 w-11 bottom-[-20px] text-ls flex justify-center items-center right-[40%]"></i>      
     </div>
-    <div class="w-72 h-52 p-3 rounded-md bg-zinc-100 relative border-[1px] border-neutral-300 shadow-md">
-      <h3 class="text-zinc-400">Growth Rate</h3>
-      <h5 class="text-zinc-300 text-[14px] mt-2">Balance</h5>
-      <h3><span class="font-bold text-xl">2,500</span> USD</h3>
-      <div class="my-2">
-        <span class="text-zinc-300 text-[14px] mt-2">Increase</span>
-        <div class="flex-col  items-start justify-center gap-3">
-          <h3 class=" text-[16px] font-bold mb-2">-3500</h3>
-          <div class=" bg-red-500 h-2 rounded-lg w-[50%] border-2"></div>
+    <div
+      class="flex flex-col justify-center items-center w-72 h-56 p-4 rounded-md bg-white relative border-[1px] border-neutral-100 shadow-md"
+    >
+      <i
+        class="mt-5 bi bi-graph-up-arrow font-medium p-4 bg-orange-200 text-orange-500 rounded-full h-10 w-10 text-xl flex justify-center items-center"
+      ></i>
+      <h3 class="text-neutral-400 mt-2 text-xl ms-1">Growth rate</h3>
+      <h5 class="text-neutral-300 text-[14px] mt-2">Balance</h5>
+      <h3 class="text-neutral-400 flex justify-start items-center gap-1">
+        <span class="font-bold text-3xl text-neutral-700">2,500</span> USD
+      </h3>
+      <div class="my-1">
+        <span class="text-neutral-300 text-[14px] mt-2 ms-2">Increase</span>
+        <div class="flex-col items-start justify-center gap-3">
+          <h3 class="text-[20px] font-bold mb-2 text-neutral-700">
+            +3,500
+            <i
+              class="text-green-500 bi bi-arrow-up-right-circle-fill text-[14px]"
+            ></i>
+          </h3>
         </div>
       </div>
-      <i class="bi bi-border-width absolute  p-2 bg-slate-700 text-white rounded-full h-11 w-11 bottom-[-20px] text-ls flex justify-center items-center right-[40%]"></i>
     </div>
   </section>
-  <section class="flex justify-between items-center mb-8 mt-8">
-    <section>
-      <h3 class="text-neutral-300">Income by source</h3>
-      <div class="mt-8">
-        <canvas id="chart-income-by-source">{{ chartIncomeBySource }}</canvas>
-      </div>
-    </section>
-    <section>
-      <h3 class="text-neutral-300">Income by category</h3>
-      <div class="mt-8">
-        <canvas id="chart-income-by-category">{{
-          chartIncomeByCategory
-        }}</canvas>
-      </div>
-    </section>
-  </section>
+  <h1 class="text-neutral-600 text-3xl">Income Trends</h1>
 
-  <section class="my-8 flex-col justify-center items-center">
-    <h1 class="text-neutral-400">Income Trends</h1>
+  <section
+    class="my-8 flex-col justify-center items-center p-6 bg-white rounded-lg"
+  >
+    <div class="mb-7 flex justify-between items-center">
+      <h3 class="text-zinc-300">Graphic</h3>
+      <div class="flex justify-center items-center gap-2">
+        <span
+          class="relative flex justify-center h-14 w-14 items-center gap-2 rounded-full bg-zinc-200 p-2 cursor-pointer"
+        >
+          <i class="bi bi-calendar-check-fill cursor-pointer text-neutral-600">
+          </i>
+          <input
+            id="month"
+            class="hidden absolute top-0 right-0"
+            name="month"
+            type="date"
+          />
+        </span>
+      </div>
+    </div>
+
     <div class="mt-8">
       <canvas id="chart-income-trends">{{ chartIncomeTrends }}</canvas>
     </div>
   </section>
-
-  <section class="flex justify-between items-center gap-4 my-8">
-    <section>
-      <h2 class="text-neutral-300">Income Table</h2>
-      <table>
-        <thead>
-          <th>
-            <tr>
-              <td>Data</td>
-              <td>Source</td>
-              <td>Amount</td>
-            </tr>
-          </th>
+  <h2 class="text-neutral-600 text-3xl">Income Table</h2>
+  <h3 class="text-zinc-300">Informative Table</h3>
+  <section
+    class="flex justify-between items-center gap-4 my-8 w-full bg-white rounded-lg p-6"
+  >
+    <section class="w-[70%]">
+      <table class="w-full font-light my-8 bg-neutral-800">
+        <thead class="text-white">
+          <tr class="">
+            <th class="">#</th>
+            <th>Data</th>
+            <th>Source</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Notes</th>
+          </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-white text-neutral-600 w-full p-2 text-start">
           <tr>
-            <td>20/05/2024</td>
-            <td>Salary</td>
-            <td>5000</td>
+            <td>1</td>
+            <td>20-01-2024</td>
+            <td>Freelancer</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
+          </tr>
+          <tr class="bg-zinc-100">
+            <td>2</td>
+            <td>10-03-2024</td>
+            <td>Job</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
           </tr>
           <tr>
-            <td>20/05/2024</td>
-            <td>Salary</td>
-            <td>5000</td>
+            <td>3</td>
+            <td>20-05-2024</td>
+            <td>Job</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
+          </tr>
+          <tr class="bg-zinc-100">
+            <td>3</td>
+
+            <td>20-05-2024</td>
+            <td>Job</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
           </tr>
           <tr>
-            <td>20/05/2024</td>
-            <td>Salary</td>
-            <td>5000</td>
-          </tr>
-          <tr>
-            <td>20/05/2024</td>
-            <td>Salary</td>
-            <td>5000</td>
-          </tr>
-          <tr>
-            <td>20/05/2024</td>
-            <td>Salary</td>
-            <td>5000</td>
+            <td>4</td>
+            <td>20-05-2024</td>
+            <td>Job</td>
+            <td>100</td>
+            <td>Tech</td>
+            <td>website building</td>
           </tr>
         </tbody>
       </table>
     </section>
-    <section>
-      forecasting panel projections
-    <span>Shows future income projections with a small graph or key figures.</span>
+    <section class="w-[30%] text-zinc-600 mt-[-13rem]">
+      <h2 class="font-bold mb-4">Forecasting projections</h2>
+      <div class="relative">
+        <div class="bg-neutral-600 w-52 h-48 rounded-lg absolute shadow-xl">
+          <img
+            class="rounded-lg"
+            src="../../../assets/images/graph-image2.png.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="bg-neutral-800 w-56 h-48 rounded-lg z-40 absolute top-16 shadow-xl left-28"
+        >
+          <img
+            class="rounded-lg"
+            src="../../../assets/images/graph-image1.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+  </section>
+  <h1 class="text-neutral-600 text-3xl">Income Breakdown</h1>
+  <section
+    class="flex justify-between items-stretch mb-8 mt-8 w-full bg-white rounded-lg p-6"
+  >
+    <section class="w-[50%]">
+      <h3
+        class="text-neutral-300 text-xl flex justify-start items-center gap-1"
+      >
+        Incomes <span class="text-zinc-400 text-[12px]">| by source</span>
+      </h3>
+      <div class="mt-8">
+        <canvas class="ms-[-13rem] w-[500px]" id="chart-income-by-source">{{
+          chartIncomeBySource
+        }}</canvas>
+      </div>
+      <div class="mt-3 ms-5 flex gap-10 justify-start items-center">
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-stone-600 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">March</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-lime-600 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">April</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-rose-300 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">May</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-black text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">June</span>
+        </span>
+      </div>
+    </section>
+    <section class="w-[50%]">
+      <h3
+        class="text-neutral-300 text-xl flex justify-start items-center gap-1"
+      >
+        Incomes <span class="text-zinc-400 text-[12px]">| by category</span>
+      </h3>
+      <div class="mt-8 flex justify-start">
+        <canvas class="w-[500px]" id="chart-income-by-category">{{
+          chartIncomeByCategory
+        }}</canvas>
+      </div>
+      <div class="mt-3 ms-5 flex gap-10 justify-center items-center">
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-stone-600 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">March</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-lime-600 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">April</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-rose-300 text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">May</span>
+        </span>
+        <span class="flex justify-center items-center gap-1">
+          <i class="bi bi-circle-fill text-black text-[4px]"></i>
+          <span class="text-zinc-400 text-sm">June</span>
+        </span>
+      </div>
     </section>
   </section>
 
   <div class="flex justify-center items-center gap-2 mt-8">
-    <span class="bg-zinc-200 text-[12px] rounded-lg  p-1 text-zinc-600 border-[1px] border-zinc-600">Export as <i class="bi bi-filetype-csv font-bold"></i> </span>
-    <span class="bg-zinc-200 text-[12px] rounded-lg p-1 text-zinc-600 border-[1px] border-zinc-600">Download report <i class="bi bi-filetype-pdf font-bold"></i></span>
+    <span
+      class="cursor-pointer text-[14px] rounded-lg p-1 text-zinc-500 hover:text-zinc-400"
+      >Export as <i class="bi bi-filetype-csv font-bold"></i>
+    </span>
+
+    <span>/</span>
+    <span
+      class="hover:text-zinc-400 cursor-pointer text-[14px] p-1 text-zinc-500"
+      >Download report <i class="bi bi-filetype-pdf font-bold"></i
+    ></span>
   </div>
 </section>
-
-<!-- <p>incomes works!</p>
-<div>
-  Receitas Totais: Resumo das receitas totais, detalhadas por mês ou trimestre.
-  Receitas por Categoria: Análise das receitas de diferentes fontes (vendas, serviços, investimentos, etc.).
-</div>
-
-<div>
-  Investimentos
-
-  Resumo de Investimentos: Desempenho geral dos investimentos.
-  Análise de Portfólio: Análise detalhada de diferentes investimentos e seu desempenho.
-  Metas Financeiras
-
-  Definição de Metas: Configuração de metas financeiras.
-  Acompanhamento de Metas: Monitoramento do progresso em relação às metas definidas.
-</div> -->
-
-<!-- Here's a simple wireframe idea for your income page. You can use this as a guide to structure your layout and ensure that it’s visually appealing and user-friendly.
-
-### 1. **Header Section**
-- **Title:** "Income Overview"
-  - Positioned at the top left.
-  - Font size: large, bold.
-- **Date Range Picker:** 
-  - Top right corner.
-  - Include options like "This Month," "Last Month," "Custom Range."
-
----
-
-### 2. **Summary Cards**
-- **Layout:** A row of cards (typically 4) right below the header.
-  - **Card 1:** "Total Income"
-  - **Card 2:** "Average Income"
-  - **Card 3:** "Highest Income Source"
-  - **Card 4:** "Growth Rate"
-  - Each card should be rectangular with rounded corners, a small icon on the top left, the main figure prominently displayed, and a small label below it.
-
----
-
-### 3. **Income Breakdown**
-- **Pie Chart or Bar Graph** (Left side):
-  - Displays income by source.
-  - Positioned below the summary cards, taking up about half the width of the page.
-- **Income by Category** (Right side):
-  - A bar chart or a second pie chart.
-  - Positioned to the right of the first chart, filling the remaining width.
-
----
-
-### 4. **Income Trends**
-- **Line Graph:**
-  - Positioned directly below the income breakdown charts.
-  - Spans the full width of the page.
-  - Shows income trends over time with clear axis labels and legends.
-
----
-
-### 5. **Income Table**
-- **Detailed Table:**
-  - Positioned below the line graph, taking up the full width.
-  - Columns: Date, Source, Amount, Category, Notes.
-  - Include sorting options by clicking on column headers.
-  - Add a search bar above the table for easy filtering.
-
----
-
-### 6. **Forecasting Section**
-- **Projections Panel:**
-  - Positioned below the income table or beside it if there’s space.
-  - Shows future income projections with a small graph or key figures.
-
----
-
-### 7. **Footer Section**
-- **Export & Reports:**
-  - Positioned at the bottom of the page.
-  - Include buttons for "Export as CSV," "Download PDF Report," etc.
-
----
-
-### Visual Representation:
-
-```
-+-------------------------------------------------------------+
-|                      Income Overview                        |
-|             [Date Range Picker: Last 30 Days ▼]             |
-+-------------------------------------------------------------+
-|  +------------+  +------------+  +------------+  +---------+|
-|  | Total      |  | Average    |  | Highest    |  | Growth   |
-|  | Income     |  | Income     |  | Source     |  | Rate     |
-|  +------------+  +------------+  +------------+  +---------+|
-+-------------------------------------------------------------+
-|   Pie Chart: Income by Source   |   Bar Chart: Income by    |
-|                                 |   Category                |
-|              [Chart]            |           [Chart]         |
-+-------------------------------------------------------------+
-|                     Income Trends (Line Graph)              |
-|                            [Graph]                          |
-+-------------------------------------------------------------+
-|          Income Table          |      Forecasting Panel     |
-|   [Date]  [Source]  [Amount]   |      [Projections]         |
-|   [Table]                      |                            |
-+-------------------------------------------------------------+
-|                    [Export as CSV] [Download Report]        |
-+-------------------------------------------------------------+
-```
-
-This wireframe should give you a clear structure to start designing your income page. It balances visuals with functionality, ensuring that your financial data is both informative and engaging. -->

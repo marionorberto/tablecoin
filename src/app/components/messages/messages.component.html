@@ -1,1 +1,380 @@
 <p>messages works!</p>
+
+<!-- 
+
+### **General Message User Page**
+
+#### **UI Recommendations:**
+
+1. **Clean Layout:**
+   - **Minimalist Design:** Keep the layout simple with a focus on the content. Use ample white space to reduce clutter and improve readability.
+   - **Responsive Design:** Ensure the message page is fully responsive, adapting to various screen sizes without losing functionality or aesthetic appeal.
+
+2. **Message List:**
+   - **Compact List View:** Display messages in a list with a brief preview (subject and first few lines of the message). This helps users quickly identify important messages.
+   - **Unread Indicators:** Use a bold font or a subtle colored dot to indicate unread messages.
+   - **Filter & Search Bar:** Add a search bar at the top to allow users to quickly find specific messages. Include filters for categories like "Unread," "Starred," and "Archived."
+
+3. **Message Detail Pane:**
+   - **Split-View Layout:** Implement a split-view layout where the message list is on the left, and the selected message is displayed on the right.
+   - **Clear Call-to-Actions:** Include buttons for "Reply," "Forward," and "Archive" at the top of the message pane. Ensure these buttons are prominently displayed and easy to click.
+   - **Threaded Conversations:** For emails or messages with multiple replies, use a threaded view to show the conversation history in a chronological order.
+
+4. **User Experience:**
+   - **Quick Actions:** Add swipe gestures on mobile (e.g., swipe left to delete, swipe right to archive) for faster message management.
+   - **Auto-Save Drafts:** Automatically save drafts of messages as users compose them, ensuring no content is lost.
+   - **Notifications:** Provide real-time notifications for new messages, ensuring users are promptly informed.
+
+5. **Visual Consistency:**
+   - **Color Scheme:** Stick to a consistent color scheme that aligns with the overall dashboard design. Use colors to differentiate message types (e.g., blue for unread, gray for archived).
+   - **Typography:** Use legible fonts with a hierarchy (e.g., larger font for subjects, smaller font for preview text) to guide users’ attention.
+
+#### **UX Recommendations:**
+
+1. **Intuitive Navigation:**
+   - **Breadcrumbs:** Use breadcrumb navigation to show users where they are within the messaging system and allow them to easily navigate back to previous sections.
+   - **Hover Effects:** Implement subtle hover effects on message items to improve interactivity and provide visual feedback.
+
+2. **Accessibility:**
+   - **Keyboard Shortcuts:** Offer keyboard shortcuts for common actions (e.g., "R" for reply, "A" for archive) to enhance efficiency for power users.
+   - **Screen Reader Compatibility:** Ensure the page is compatible with screen readers, providing descriptive labels for buttons and fields.
+
+3. **Feedback & Confirmation:**
+   - **Undo Options:** After deleting or archiving a message, provide an "Undo" option to recover the message immediately.
+   - **Progress Indicators:** Use progress indicators or spinners when loading new messages or sending a message, so users know their actions are being processed.
+
+### **Notification User Page**
+
+#### **UI Recommendations:**
+
+1. **Organized Layout:**
+   - **Notification Categories:** Group notifications by type (e.g., Financial Alerts, Account Activity) to help users quickly find relevant information.
+   - **Expandable Sections:** Use expandable/collapsible sections to keep the page clean while allowing users to dive into specific notification categories.
+
+2. **Notification List:**
+   - **Clear Status Indicators:** Use icons or colors to indicate the status of notifications (e.g., red for critical, green for informational, blue for updates).
+   - **Compact Cards:** Present notifications in compact card-style elements, each showing a brief description, timestamp, and relevant action buttons.
+   - **Mark as Read/Unread:** Provide an easy way to mark notifications as read or unread, with clear visual feedback.
+
+3. **Visual Hierarchy:**
+   - **Priority Notifications:** Display high-priority notifications at the top of the list, possibly with a highlighted background to draw attention.
+   - **Consistent Icons:** Use consistent and meaningful icons next to each notification to quickly convey the nature of the alert (e.g., a bell icon for general notifications, an exclamation mark for urgent issues).
+
+4. **User Experience:**
+   - **Notification Preferences:** Include a link or button that takes users directly to the notification settings page, where they can customize what types of notifications they receive.
+   - **Bulk Actions:** Allow users to perform bulk actions, such as marking all notifications as read or deleting multiple notifications at once.
+   - **Real-Time Updates:** Ensure that notifications are updated in real-time, with a subtle animation to indicate new notifications have arrived.
+
+5. **Visual Consistency:**
+   - **Color Coding:** Use color coding to differentiate notification types. For instance, financial alerts could be red, while general updates could be blue.
+   - **Typography:** Ensure that the notification titles are bold or slightly larger to make them stand out, with a smaller font for the description.
+
+#### **UX Recommendations:**
+
+1. **Intuitive Interaction:**
+   - **Swipe Actions:** On mobile, incorporate swipe actions for quick management (e.g., swipe left to delete, swipe right to mark as read).
+   - **Hover Tooltips:** Provide tooltips on hover for additional information or actions related to a notification.
+
+2. **Accessibility:**
+   - **Focus States:** Clearly define focus states for keyboard navigation, ensuring that users who rely on keyboard interaction can easily manage notifications.
+   - **Readable Text:** Use a readable font size and contrast ratio to make sure all users, including those with visual impairments, can comfortably read notifications.
+
+3. **Feedback & Confirmation:**
+   - **Undo Options:** After deleting or dismissing a notification, offer an "Undo" option to allow users to quickly recover it.
+   - **Loading Indicators:** Use loading spinners or skeleton screens while notifications are being fetched or processed to inform users that the system is working.
+
+By applying these UI and UX recommendations, both the general message user page and the notification user page will be functional, user-friendly, and visually appealing, enhancing the overall experience of the financial dashboard.
+-->
+
+<!-- 
+### **General Message User Page (Standalone)**
+
+#### **Wireframe Layout:**
+
+```
++-------------------------------------------------------------+
+|                        Messages                              |
++-------------------------------------------------------------+
+| [Search Bar] [Filter: All ▼] [Compose New Message Button]   |
++-------------------------------------------------------------+
+|                      Message List                           |
+|-------------------------------------------------------------|
+|  [Message Item]                                             |
+|  • Subject: New Policy Update                               |
+|  • Preview: Our new policy update includes new guidelines...|
+|  • [Unread Indicator]                                      |
+|  • [Date/Time]                                              |
+|-------------------------------------------------------------|
+|  [Message Item]                                             |
+|  • Subject: Monthly Report                                |
+|  • Preview: Your monthly report is available for download. |
+|  • [Date/Time]                                              |
+|-------------------------------------------------------------+
+|                      [Compose New Message Modal]             |
+|  • Recipient: [Input Field]                                |
+|  • Subject: [Input Field]                                  |
+|  • Message Body: [Text Area]                               |
+|  • [Send Button] [Cancel Button]                           |
++-------------------------------------------------------------+
+|                     Message Detail View                     |
+|-------------------------------------------------------------|
+|  • From: admin@company.com                                |
+|  • Date: August 21, 2024                                  |
+|  • [Reply Button] [Forward Button] [Archive Button]        |
+|-------------------------------------------------------------|
+|  • Message Body:                                          |
+|    Dear User,                                              |
+|    Your monthly report is now available for review.        |
+|    [Attachment: Report.pdf]                               |
++-------------------------------------------------------------+
+|                    [Threaded Conversations]                 |
+|  • Re: Monthly Report [Date/Time]                           |
+|  • Re: Monthly Report [Date/Time]                           |
++-------------------------------------------------------------+
+```
+
+#### **Content Recommendations:**
+- **Search Bar:** For finding specific messages quickly.
+- **Filter Options:** Allow users to view messages by categories like "All," "Unread," and "Starred."
+- **Message Items:** Show a list of messages with brief previews and an unread indicator.
+- **Compose New Message:** A modal window for composing new messages, featuring input fields and action buttons.
+- **Message Detail View:** Displays the full content of a selected message, with options to reply, forward, or archive.
+- **Threaded Conversations:** Displays related messages in a threaded view for context.
+
+---
+
+### **Notification User Page (Standalone)**
+
+#### **Wireframe Layout:**
+
+```
++-------------------------------------------------------------+
+|                     Notifications                           |
++-------------------------------------------------------------+
+| [Search Bar] [Filter: All ▼] [Mark All as Read Button]      |
++-------------------------------------------------------------+
+|                      Notification List                      |
+|-------------------------------------------------------------|
+|  [Notification Card]                                       |
+|  • Type: Financial Alert                                   |
+|  • Description: Your account balance is below threshold.  |
+|  • [Date/Time]                                             |
+|  • [Mark as Read Button] [Delete Button]                   |
+|-------------------------------------------------------------|
+|  [Notification Card]                                       |
+|  • Type: Account Activity                                  |
+|  • Description: Login from a new device detected.          |
+|  • [Date/Time]                                             |
+|  • [Mark as Read Button] [Delete Button]                   |
+|-------------------------------------------------------------+
+|                    [Notification Preferences]               |
+|  • Email Notifications: [On/Off Toggle]                    |
+|  • SMS Notifications: [On/Off Toggle]                      |
+|  • Push Notifications: [On/Off Toggle]                     |
+|  • [Save Preferences Button]                               |
++-------------------------------------------------------------+
+```
+
+#### **Content Recommendations:**
+- **Search Bar:** For filtering notifications by keywords or categories.
+- **Filter Options:** Allow users to sort notifications by type or status (e.g., "All," "Read," "Unread").
+- **Notification Cards:** Display each notification with a brief description, timestamp, and action buttons for managing notifications.
+- **Mark All as Read:** Button to mark all notifications as read at once.
+- **Notification Preferences:** Section for users to adjust their notification settings.
+
+These wireframes are designed to provide a clean, user-friendly interface for managing messages and notifications, with clear content and intuitive functionality.
+
+-->
+
+<!-- 
+### **General Message User Page Wireframe**
+
+#### **Wireframe Layout:**
+
+```
++-------------------------------------------------------------+
+|                     General Message User Page               |
++-------------------------------------------------------------+
+|                  [Sidebar Navigation]                       |
+|  [Profile] [Message] [Notifications] [Account]              |
++-------------------------------------------------------------+
+|                         Message List                        |
+|  [Search Bar] [Filter: All ▼]                               |
+|-------------------------------------------------------------|
+|  [Message Preview]                                         |
+|  • Subject: New Policy Update                                |
+|  • Preview: Our new policy update includes...               |
+|  [Unread Indicator]                                        |
+|-------------------------------------------------------------|
+|  [Message Preview]                                         |
+|  • Subject: Monthly Report                                 |
+|  • Preview: Your monthly report is now available...         |
+|-------------------------------------------------------------|
+|                         [Compose New Message]                |
+|  [Button: Compose New Message]                             |
++-------------------------------------------------------------+
+|                       Message Detail Pane                    |
+|-------------------------------------------------------------|
+|  [Message Header]                                          |
+|  • From: admin@company.com                                |
+|  • Date: August 21, 2024                                  |
+|  • [Reply] [Forward] [Archive]                              |
+|-------------------------------------------------------------|
+|  [Message Body]                                            |
+|  Dear User,                                                  |
+|  Your monthly report is now available for review. Please...|
+|  [Attachment: Report.pdf]                                   |
+|-------------------------------------------------------------|
+|                         [Threaded Conversations]             |
+|  [Previous Messages]                                       |
+|  • Re: Monthly Report [Date/Time]                           |
+|  • Re: Monthly Report [Date/Time]                           |
++-------------------------------------------------------------+
+```
+
+#### **Content Recommendations:**
+- **Search Bar:** Allows users to quickly search for specific messages.
+- **Filter Options:** Users can filter messages by categories like "Unread," "Starred," or "Archived."
+- **Compose Button:** Prominently placed to encourage users to compose new messages.
+- **Message Detail:** Includes actions like "Reply," "Forward," and "Archive" for easy message management.
+- **Threaded Conversations:** Shows related messages in a conversation view for context.
+
+### **Notification User Page Wireframe**
+
+#### **Wireframe Layout:**
+
+```
++-------------------------------------------------------------+
+|                     Notification User Page                  |
++-------------------------------------------------------------+
+|                  [Sidebar Navigation]                       |
+|  [Profile] [Message] [Notifications] [Account]              |
++-------------------------------------------------------------+
+|                   Notification Preferences                  |
+|  Email: [On/Off Toggle]                                    |
+|  SMS: [On/Off Toggle]                                      |
+|  Push: [On/Off Toggle]                                     |
+|  Financial Alerts: [Checkbox]                               |
+|  Account Activity: [Checkbox]                               |
+|  Promotional Messages: [Checkbox]                           |
+|  [Save Preferences] [Cancel]                                |
++-------------------------------------------------------------+
+|                      Notification List                      |
+|-------------------------------------------------------------|
+|  [Notification Card]                                       |
+|  • Type: Financial Alert                                   |
+|  • Description: Your account balance is below threshold... |
+|  • [Mark as Read] [Delete]                                 |
+|  • [Timestamp]                                             |
+|-------------------------------------------------------------|
+|  [Notification Card]                                       |
+|  • Type: Account Activity                                  |
+|  • Description: Login from a new device detected.          |
+|  • [Mark as Read] [Delete]                                 |
+|  • [Timestamp]                                             |
++-------------------------------------------------------------+
+|                     [Notification History]                  |
+|  [Clear All Notifications]                                 |
++-------------------------------------------------------------+
+```
+
+#### **Content Recommendations:**
+- **Notification Preferences:** Allows users to toggle and customize notification settings for different channels and types.
+- **Notification Cards:** Display each notification with relevant information, actions for managing the notification, and timestamps.
+- **Clear All Notifications:** Option to clear all notifications, providing a quick way to reset the notification list.
+
+### **Summary of UI and UX Recommendations Applied:**
+
+- **Navigation:** Clear sidebar navigation for easy access to different settings.
+- **Compact View:** Use compact cards or list views to present messages and notifications.
+- **Action Buttons:** Provide prominent action buttons for managing messages and notifications.
+- **Feedback:** Include options for users to undo actions and receive real-time updates for new messages and notifications.
+
+These wireframes ensure that both the general message and notification user pages are intuitive, well-organized, and user-friendly, enhancing the overall experience within the financial dashboard.
+
+-->
+
+<!-- 
+### **General Message User Page**
+
+#### **UI Recommendations:**
+
+1. **Clean Layout:**
+   - **Minimalist Design:** Keep the layout simple with a focus on the content. Use ample white space to reduce clutter and improve readability.
+   - **Responsive Design:** Ensure the message page is fully responsive, adapting to various screen sizes without losing functionality or aesthetic appeal.
+
+2. **Message List:**
+   - **Compact List View:** Display messages in a list with a brief preview (subject and first few lines of the message). This helps users quickly identify important messages.
+   - **Unread Indicators:** Use a bold font or a subtle colored dot to indicate unread messages.
+   - **Filter & Search Bar:** Add a search bar at the top to allow users to quickly find specific messages. Include filters for categories like "Unread," "Starred," and "Archived."
+
+3. **Message Detail Pane:**
+   - **Split-View Layout:** Implement a split-view layout where the message list is on the left, and the selected message is displayed on the right.
+   - **Clear Call-to-Actions:** Include buttons for "Reply," "Forward," and "Archive" at the top of the message pane. Ensure these buttons are prominently displayed and easy to click.
+   - **Threaded Conversations:** For emails or messages with multiple replies, use a threaded view to show the conversation history in a chronological order.
+
+4. **User Experience:**
+   - **Quick Actions:** Add swipe gestures on mobile (e.g., swipe left to delete, swipe right to archive) for faster message management.
+   - **Auto-Save Drafts:** Automatically save drafts of messages as users compose them, ensuring no content is lost.
+   - **Notifications:** Provide real-time notifications for new messages, ensuring users are promptly informed.
+
+5. **Visual Consistency:**
+   - **Color Scheme:** Stick to a consistent color scheme that aligns with the overall dashboard design. Use colors to differentiate message types (e.g., blue for unread, gray for archived).
+   - **Typography:** Use legible fonts with a hierarchy (e.g., larger font for subjects, smaller font for preview text) to guide users’ attention.
+
+#### **UX Recommendations:**
+
+1. **Intuitive Navigation:**
+   - **Breadcrumbs:** Use breadcrumb navigation to show users where they are within the messaging system and allow them to easily navigate back to previous sections.
+   - **Hover Effects:** Implement subtle hover effects on message items to improve interactivity and provide visual feedback.
+
+2. **Accessibility:**
+   - **Keyboard Shortcuts:** Offer keyboard shortcuts for common actions (e.g., "R" for reply, "A" for archive) to enhance efficiency for power users.
+   - **Screen Reader Compatibility:** Ensure the page is compatible with screen readers, providing descriptive labels for buttons and fields.
+
+3. **Feedback & Confirmation:**
+   - **Undo Options:** After deleting or archiving a message, provide an "Undo" option to recover the message immediately.
+   - **Progress Indicators:** Use progress indicators or spinners when loading new messages or sending a message, so users know their actions are being processed.
+
+### **Notification User Page**
+
+#### **UI Recommendations:**
+
+1. **Organized Layout:**
+   - **Notification Categories:** Group notifications by type (e.g., Financial Alerts, Account Activity) to help users quickly find relevant information.
+   - **Expandable Sections:** Use expandable/collapsible sections to keep the page clean while allowing users to dive into specific notification categories.
+
+2. **Notification List:**
+   - **Clear Status Indicators:** Use icons or colors to indicate the status of notifications (e.g., red for critical, green for informational, blue for updates).
+   - **Compact Cards:** Present notifications in compact card-style elements, each showing a brief description, timestamp, and relevant action buttons.
+   - **Mark as Read/Unread:** Provide an easy way to mark notifications as read or unread, with clear visual feedback.
+
+3. **Visual Hierarchy:**
+   - **Priority Notifications:** Display high-priority notifications at the top of the list, possibly with a highlighted background to draw attention.
+   - **Consistent Icons:** Use consistent and meaningful icons next to each notification to quickly convey the nature of the alert (e.g., a bell icon for general notifications, an exclamation mark for urgent issues).
+
+4. **User Experience:**
+   - **Notification Preferences:** Include a link or button that takes users directly to the notification settings page, where they can customize what types of notifications they receive.
+   - **Bulk Actions:** Allow users to perform bulk actions, such as marking all notifications as read or deleting multiple notifications at once.
+   - **Real-Time Updates:** Ensure that notifications are updated in real-time, with a subtle animation to indicate new notifications have arrived.
+
+5. **Visual Consistency:**
+   - **Color Coding:** Use color coding to differentiate notification types. For instance, financial alerts could be red, while general updates could be blue.
+   - **Typography:** Ensure that the notification titles are bold or slightly larger to make them stand out, with a smaller font for the description.
+
+#### **UX Recommendations:**
+
+1. **Intuitive Interaction:**
+   - **Swipe Actions:** On mobile, incorporate swipe actions for quick management (e.g., swipe left to delete, swipe right to mark as read).
+   - **Hover Tooltips:** Provide tooltips on hover for additional information or actions related to a notification.
+
+2. **Accessibility:**
+   - **Focus States:** Clearly define focus states for keyboard navigation, ensuring that users who rely on keyboard interaction can easily manage notifications.
+   - **Readable Text:** Use a readable font size and contrast ratio to make sure all users, including those with visual impairments, can comfortably read notifications.
+
+3. **Feedback & Confirmation:**
+   - **Undo Options:** After deleting or dismissing a notification, offer an "Undo" option to allow users to quickly recover it.
+   - **Loading Indicators:** Use loading spinners or skeleton screens while notifications are being fetched or processed to inform users that the system is working.
+
+By applying these UI and UX recommendations, both the general message user page and the notification user page will be functional, user-friendly, and visually appealing, enhancing the overall experience of the financial dashboard.
+-->
