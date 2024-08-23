@@ -54,7 +54,6 @@ export class IncomesComponent {
             borderColor: '#fef9c3',
             borderRadius: 5,
             barPercentage: 0.4
-            
           }
         ]
       },
@@ -62,6 +61,9 @@ export class IncomesComponent {
         aspectRatio: 2.5,
         scales: {
        x: {
+        grid: {
+          display: false
+    }}, y: {
         grid: {
           display: false
     }}

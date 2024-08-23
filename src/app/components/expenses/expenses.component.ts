@@ -21,20 +21,15 @@ export class ExpensesComponent {
       this.chartExpensesMonth = new Chart('chart-expenses-month', {
       type: 'bar',
       data: {
-        labels: ['February','March', 'April', 'May', 'June'],
+        labels: ['February','March', 'April', 'May', 'June', 'July'],
         datasets: [
           {
             label: 'category',
-            data: ['1500', '1300', '1200', '1600', '1000'],
-            backgroundColor: ['#f97316','#fdba74', '#fb923c', '#fed7aa', '#c2410c'],
-            borderRadius: 7,
-            barPercentage: 0.6,
-            minBarLength: 10,
-            
-
-            // backgroundColor: ['#3C3D37', '#697565', '#ECDFCC', '#000'],
+            data: ['1500', '1300', '1200', '1600', '1000', '1400'],
+            backgroundColor: ['#f97316','#fdba74', '#fb923c', '#fed7aa', '#c2410c', '#fed7aa'],
+            borderRadius: 5,
+            barPercentage: 0.3,
             borderColor: '#fef9c3',
-            
           }
         ]
       },
@@ -42,6 +37,9 @@ export class ExpensesComponent {
         aspectRatio: 2.5,
         scales: {
        x: {
+        grid: {
+          display: false
+    }},y: {
         grid: {
           display: false
     }}
